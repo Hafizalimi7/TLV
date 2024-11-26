@@ -1,20 +1,29 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import { Footer } from "./components/Footer";
+import Navbar from "./components/Navbar"; // Import the Navbar
 
-function App() {
-  const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api')
-      .then((response) => response.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-
+const App = () => {
   return (
-    <div>
-      <h1>Full Stack App</h1>
-      <p>Backend says: {message}</p>
-    </div>
+    <Router>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
+
+ 
+

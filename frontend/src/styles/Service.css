@@ -1,0 +1,90 @@
+.services-page {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 36px;
+  color: #2a4b8d;
+  margin-bottom: 50px;
+}
+
+.package-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package-container:hover {
+  transform: translateY(-10px);
+}
+
+.package-container h2 {
+  font-size: 28px;
+  color: #4676d7;
+  margin-bottom: 20px;
+}
+
+.package-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.package-container ul {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.package-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-book-call {
+  background-color: #4676d7;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-book-call:hover {
+  background-color: #2a4b8d;
+}
+
+.btn-buy-now {
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buy-now:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .package-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .package-container {
+    padding: 15px;
+  }
+}
