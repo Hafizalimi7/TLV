@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import '../styles/Footer.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -20,13 +21,14 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
-        <a href="#home" className="footer-link">Home</a>
-        <a href="#about" className="footer-link">About</a>
-        <a href="#contact" className="footer-link">Contact</a>
+        <Link to="/" className="footer-link">Home</Link> {/* Links to home */}
+        <Link to="/about" className="footer-link">About</Link> {/* Links to /about */}
+        <Link to="/services" className="footer-link">Services</Link> {/* Links to /services */}
+        <Link to="/contact" className="footer-link">Contact</Link> {/* Links to /contact */}
       </div>
 
       <div className="copyright">
-        <p>© The Health, All Rights Reserved</p>
+        <p>© The Life Voyage, All Rights Reserved</p>
       </div>
     </footer>
   );

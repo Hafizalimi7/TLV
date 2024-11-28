@@ -34,12 +34,18 @@
 
 .footer-link {
   text-decoration: none;
-  color: #333; /* Color of footer links */
+  color: #333; /* Default color for links */
   font-size: 16px;
 }
 
 .footer-link:hover {
   color: #007bff; /* Change color on hover */
+}
+
+/* Active link styling */
+.active-link {
+  color: #007bff; /* Active link color */
+  font-weight: bold; /* Optional: Make active link bold */
 }
 
 .copyright {
