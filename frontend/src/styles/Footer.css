@@ -1,94 +1,49 @@
-/* Footer styles */
+/* Footer Styling */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 50px 0;
-  text-align: center;
-}
-
-.footer-container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.footer-column {
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.footer-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-signup {
-  width: 30%;
-  margin-top: 20px;
-}
-
-.footer-signup h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.footer-signup form {
-  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything */
   justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-top: 1px solid #ddd;
 }
 
-.footer-signup input {
-  padding: 10px;
-  font-size: 1rem;
-  margin-right: 10px;
-  border: none;
-  border-radius: 4px;
-  width: 200px;
+.social-media {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  justify-content: center;
+  margin-bottom: 20px; /* Space between icons and footer links */
 }
 
-.footer-signup button {
-  padding: 10px 15px;
-  font-size: 1rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.social-icon {
+  text-decoration: none;
+  color: #333; /* Color of the icons */
+  font-size: 20px; /* Adjust icon size if using text-based or icon fonts */
 }
 
-.footer-signup button:hover {
-  background-color: #45a049;
+.social-icon:hover {
+  color: #007bff; /* Change color on hover */
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between each link */
+  margin-bottom: 15px; /* Space between links and copyright text */
+}
 
-  .footer-column, .footer-signup {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+.footer-link {
+  text-decoration: none;
+  color: #333; /* Color of footer links */
+  font-size: 16px;
+}
+
+.footer-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
 }

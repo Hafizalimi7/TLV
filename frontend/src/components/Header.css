@@ -8,6 +8,12 @@
   justify-content: space-between;
 }
 
+.header .logo a {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Sets the color back to black (or whatever color you want) */
+  font-weight: bold; /* Optional: Make the title bold */
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -53,4 +59,18 @@
 
 .consultation-btn:hover {
   background-color: #444;
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Align image to the left */
+  padding: 20px;
+}
+
+.responsive-image {
+  width: 25%; /* 1/4 of the container width */
+  max-width: 300px; /* Optional: set a max-width for better scaling */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }

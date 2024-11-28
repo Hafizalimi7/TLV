@@ -1,0 +1,33 @@
+/* Image Section Styles */
+.image-section {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.rectangle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 37.30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* White text for visibility */
+  text-align: center;
+  font-size: 2.5rem; /* Larger font for emphasis */
+  font-family: sans-serif; /* Clean, modern font */  
+  margin: 0;
+  padding: 0;
+}
+

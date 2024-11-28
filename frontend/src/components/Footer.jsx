@@ -1,52 +1,35 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/Footer.css";
+import React from 'react';
+import '../styles/Footer.css';
+import 'font-awesome/css/font-awesome.min.css';
 
-export const Footer = () => {
-  const [email, setEmail] = useState("");
-
-  const handleEmailChange = (e) => setEmail(e.target.value);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add logic to handle the email submission
-    alert(`Signed up with email: ${email}`);
-  };
-
+// You can use font-awesome or any other icon library to add the social media icons
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-column">
-          <h3>Explore</h3>
-          <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/services">Services</Link></li>
-          </ul>
-        </div>
-        
-        <div className="footer-column">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="mailto:example@example.com">Email</a></li>
-            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          </ul>
-        </div>
+      <div className="social-media">
+        {/* Social media icons */}
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <i className="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <i className="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <i className="fa fa-twitter"></i> 
+        </a>
+      </div>
 
-        <div className="footer-signup">
-          <h3>Sign Up</h3>
-          <p>Sign up with your email address to receive news and updates.</p>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-              placeholder="Enter your email"
-              required
-            />
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
+      <div className="footer-links">
+        <a href="#home" className="footer-link">Home</a>
+        <a href="#about" className="footer-link">About</a>
+        <a href="#contact" className="footer-link">Contact</a>
+      </div>
+
+      <div className="copyright">
+        <p>© The Health, All Rights Reserved</p>
       </div>
     </footer>
   );
 };
+
+export default Footer;
