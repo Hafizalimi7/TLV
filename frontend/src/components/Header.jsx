@@ -4,8 +4,8 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="header">
-            <div className="header-content">
-                <h1 className="logo">The Life Voyge</h1>
+            <h1 className="logo">The Life Voyge</h1>
+            <div className="nav-group">
                 <nav className="nav">
                     <a href="#about" className="nav-link">About</a>
                     <a href="#contact" className="nav-link">Contact</a>
@@ -18,3 +18,4 @@ const Header = () => {
 };
 
 export default Header;
+
