@@ -1,14 +1,30 @@
 import React from 'react';
-import ImageSection from '../components/ImageSection';  // Import the Image Section
-import '../styles/Home.css';
+import { Link } from 'react-router-dom';
+import '../styles/Home.css';  // Assuming the styles are in Home.css
+import Header from '../components/Header';  // Make sure Header is defined and imported correctly
 
 const Home = () => {
   return (
     <div className="home">
+      
       {/* Image Section */}
-      <div id="home">
-        <ImageSection />
-      </div>
+      <section className="image-section">
+        <div className="image-container">
+          <img 
+            src="images/picture.png" 
+            alt="Empower Your Health Journey" 
+            className="rectangle-image"
+          />
+          <div className="image-overlay">
+            <h1 className="image-text">Empower Your Health Journey</h1>
+            <span className="image-subtext">
+              Welcome to our health-focused platform, where expert knowledge meets practical application. 
+              Explore research-driven insights and solutions crafted to elevate your well-being.
+            </span>
+            <Link to="/about" className="learn-more-btn">Learn More</Link>
+          </div>
+        </div>
+      </section>
 
       {/* Content Section */}
       <div className="content-section">
@@ -33,6 +49,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
- 
