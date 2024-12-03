@@ -1,4 +1,4 @@
-.services-page {
+/* .services-page {
   padding: 20px;
 }
 
@@ -33,4 +33,13 @@
 .btn-book-call:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+} */
+
+.service-page .header .logo a{
+  color: black;
 }
+
+.service-page .header .nav-link{
+  color: black;
+  }
+  

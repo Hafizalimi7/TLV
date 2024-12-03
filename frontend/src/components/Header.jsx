@@ -14,7 +14,9 @@ const Header = () => {
                     <Link to="/services" className="nav-link">Services</Link> {/* Links to /services */}
                     <Link to="/contact" className="nav-link">Contact</Link> {/* Links to /contact */}
                 </nav>
-                <button className="consultation-btn">Book Free Consultation</button> {/* Placeholder button */}
+                <Link to="/contact">
+                    <button className="consultation-btn">Book Free Consultation</button>
+                </Link>
             </div>
         </header>
     );

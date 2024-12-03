@@ -18,7 +18,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%; /* Ensure the body takes the full height of the viewport */
-}
+  font-family: sans-serif;
+  font-weight: lighter;}
 
 #root {
   display: flex;
