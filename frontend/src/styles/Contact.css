@@ -20,9 +20,10 @@
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 8px;
-  text-align: center;
+  text-align: center; 
+  margin-top: 5rem;
 }
 
 .contact-hours {
@@ -107,9 +108,7 @@
   font-size: 1.1rem;
 }
 
-/* .submit-btn:hover {
-  background-color: #45a049;
-} */
+
 
 .contact-hours,
 .contact-calendar {
@@ -136,5 +135,5 @@
 .time-icon,
 .calendar-icon {
   margin-right: 10px;
-  color: black; /* Customize the color of the clock and calendar icons */
+  color: black; 
 }
