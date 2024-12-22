@@ -2,18 +2,19 @@
 .home-image-section {
   margin: 0;
   width: 100%;
-  height: 700px;
+  height: 900px;
 }
 
 .home-image-container {
   width:  104%;
-  height: 100%;
+  height: 102%;
 }
 
 .home-rectangle-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
 
 .home-image-overlay {
@@ -23,7 +24,9 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  
 }
+
 
 .home-image-text {
   font-weight:lighter;
@@ -42,48 +45,41 @@
   padding: 0 130px;
 }
 
-/* Learn More Button Styles */
 .home-learn-more-btn {
-  display: inline-block;
-  margin-top: 0px;
-  padding: 10px 10px;
-  border: 2px solid white;
+  background-color: transparent;
   color: white;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-.home-learn-more-btn:hover {
-  background-color: gray;
-}
 
-/* Content Section Styles */
-.home-content-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-}
 
-.home-left-text {
-  width: 45%;
-  padding: 10px;
-}
-
-.home-left-text p {
+.home-more-text {
+  margin-top: 0px;
   font-size: 1.2rem;
-  line-height: 1.2;
-  color: #333;
+  line-height: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background for contrast */
+  padding: 10px; /* Add padding around the text */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow to the text */
 }
 
-.home-right-text {
-  width: 45%;
-  padding: 10px;
-}
 
-.home-right-text p {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  color: #333;
-}
+
+/* .home-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12%;  
+  height: 5%;  
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));  
+  z-index: 1;  
+  pointer-events: none;  
+} */

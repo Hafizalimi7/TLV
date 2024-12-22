@@ -1,86 +1,111 @@
-import React from 'react';
-import '../styles/Services.css'; 
+import React, { useState } from "react";
+import "../styles/Services.css";
 import Header from "../components/Header";
 
 const ServicesPage = () => {
+  const [showDetails, setShowDetails] = useState({
+    package1: false,
+    package2: false,
+    package3: false,
+  });
+
+  const toggleDetails = (packageName) => {
+    setShowDetails((prev) => ({
+      ...prev,
+      [packageName]: !prev[packageName],
+    }));
+  };
+
   return (
     <div className="services-page">
       <Header />
-      <div className="services-intro">
-        <h1>Our Services</h1>
-        <p>Explore our personalized packages and programs designed to support your health and well-being.</p>
-      </div>
+      
+      {/* Background Image Section */}
+      <section className="services-background">
+  <div className="services-background-overlay">
+    <h1>Our Services</h1>
+    <p>Book Your Free 15-Minute Consultation</p>
+    <button className="book-now-btn">Book Now</button>
+  </div>
+</section>
 
-      {/* Service Cards */}
+      {/* Service Cards Section */}
       <div className="services-container">
-        {/* Package 1 */}
-        <div className="service-card">
-          <h2>Comprehensive Cancer Care Package</h2>
-          <p>For individuals navigating life with cancer, tailored for every stage of the journey.</p>
-          <ul>
-            <li>90 min initial appointment - fact gathering</li>
-            <li>2 x 45 min follow-up sessions (spaced 3-4 weeks apart)</li>
-            <li>30 min final session</li>
-            <li>Customized recommendation plan after the initial appointment</li>
-            <li>Test & supplement recommendations</li>
-            <li>Plan revisions as needed within three months</li>
-            <li>Email & text support as required</li>
-          </ul>
-          <p><strong>Standard Price:</strong> £800</p>
-          <p><strong>Payment Plan:</strong> £400 upfront, followed by £200/month for 2 months</p>
-        </div>
-
-        {/* Package 2 */}
-        <div className="service-card">
-          <h2>Returning Customers Package</h2>
-          <p>For returning clients, enjoy the same comprehensive package at a discounted rate.</p>
-          <p><strong>Contact us for pricing details.</strong></p>
-        </div>
-
-        {/* Package 3 */}
-        <div className="service-card">
-          <h2>Holistic Cancer Prevention Program: "Empower & Prevent"</h2>
-          <p>Adopt sustainable lifestyle changes with our 6-month online coaching program.</p>
-          <div className="program-timeline">
-            <div className="program-month">
-              <h3>Month 1</h3>
-              <p><strong>Revamping the Pantry</strong></p>
-              <p>Replace unhealthy foods with nutrient-dense alternatives.</p>
-            </div>
-            <div className="program-month">
-              <h3>Month 2</h3>
-              <p><strong>Healthier Meals & Hydration</strong></p>
-              <p>Focus on balanced meals and proper hydration.</p>
-            </div>
-            <div className="program-month">
-              <h3>Month 3</h3>
-              <p><strong>Low-Intensity Exercise</strong></p>
-              <p>Introduce sustainable physical activities.</p>
-            </div>
-            <div className="program-month">
-              <h3>Month 4</h3>
-              <p><strong>Supplementation & Strength</strong></p>
-              <p>Incorporate evidence-based supplements and moderate exercise.</p>
-            </div>
-            <div className="program-month">
-              <h3>Month 5</h3>
-              <p><strong>Integration & Planning</strong></p>
-              <p>Combine elements into a cohesive plan.</p>
-            </div>
-            <div className="program-month">
-              <h3>Month 6</h3>
-              <p><strong>Household & Personal Care Detox</strong></p>
-              <p>Transition to non-toxic household and beauty products.</p>
-            </div>
+  {/* Service Card 1 */}
+  <div className="service-card">
+    <div className="service-image-container">
+      <img src="images/d.png" alt="Cancer Care" className="service-image" />
+      <div className="service-image-overlay">
+        <h2 className="service-title">Comprehensive Cancer Care</h2>
+        <p className="service-price"><strong>Price:</strong> £800</p>
+        <p className="service-description">Tailored support for individuals navigating life with cancer.</p>
+        <button onClick={() => toggleDetails("package1")} className="service-toggle-button">
+          {showDetails.package1 ? "Show Less" : "Show More"}
+        </button>
+        {showDetails.package1 && (
+          <div className="service-details">
+            <ul className="service-details-list">
+              <li>90 min initial appointment - fact gathering</li>
+              <li>2 x 45 min follow-up sessions</li>
+              <li>30 min final session</li>
+              <li>Customized recommendation plan</li>
+            </ul>
+            <p className="service-payment-plan"><strong>Payment Plan:</strong> £400 upfront, £200/month for 2 months</p>
           </div>
-          <p><strong>1-on-1 Pricing:</strong> £720 for 6 months</p>
-          <p><strong>Group Pricing:</strong> £480 for 6 months (max 5 people)</p>
-        </div>
+        )}
       </div>
+    </div>
+  </div>
+
+  {/* Service Card 2 */}
+  <div className="service-card">
+    <div className="service-image-container">
+      <img src="images/c.png" alt="Returning Customers" className="service-image" />
+      <div className="service-image-overlay">
+        <h2 className="service-title">Returning Customers Package</h2>
+        <p className="service-price"><strong>Contact us for pricing details.</strong></p>
+        <p className="service-description">Exclusive discounted package for returning clients.</p>
+        <button onClick={() => toggleDetails("package2")} className="service-toggle-button">
+          {showDetails.package2 ? "Show Less" : "Show More"}
+        </button>
+        {showDetails.package2 && (
+          <div className="service-details">
+            <p>This package offers the same comprehensive care at a reduced rate.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  {/* Service Card 3 */}
+  <div className="service-card">
+    <div className="service-image-container">
+      <img src="images/a.png" alt="Holistic Prevention" className="service-image" />
+      <div className="service-image-overlay">
+        <h2 className="service-title">Holistic Cancer Prevention Program</h2>
+        <p className="service-price"><strong>Price:</strong> £720 (1-on-1) / £480 (Group)</p>
+        <p className="service-description">Sustainable lifestyle changes with our 6-month coaching program.</p>
+        <button onClick={() => toggleDetails("package3")} className="service-toggle-button">
+          {showDetails.package3 ? "Show Less" : "Show More"}
+        </button>
+        {showDetails.package3 && (
+          <div className="service-details">
+            <ul className="service-details-list">
+              <li>Month 1: Revamping the Pantry</li>
+              <li>Month 2: Healthier Meals & Hydration</li>
+              <li>Month 3: Low-Intensity Exercise</li>
+              <li>Month 4: Supplementation & Strength</li>
+              <li>Month 5: Integration & Planning</li>
+              <li>Month 6: Household & Personal Care Detox</li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   );
 };
 
 export default ServicesPage;
-
-

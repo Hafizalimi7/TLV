@@ -4,10 +4,29 @@ import Header from "../components/Header";
 
 const AboutPage = () => {
   return (
-    <div className="about-page">
-      <Header/>
-      {/* Content Section with Flexbox Layout */}
-      <div className="content-section">
+    <div className="about">
+      <Header />
+      
+      {/* About Image Section */}
+      <section className="about-image-section">
+        <div className="about-image-container">
+          <img 
+            src="images/d.png" 
+            alt="My Journey" 
+            className="about-rectangle-image"
+          />
+          <div className="about-image-overlay">
+            <h1 className="about-image-text">About Me</h1>
+            <p className="about-image-subtext">
+              A holistic approach to cancer care shaped by personal experience, 
+              professional training, and a passion for empowering patients.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <div className="about-content-section">
         <section className="about-intro">
           <h2>My Journey</h2>
           <p>
@@ -18,7 +37,7 @@ const AboutPage = () => {
           </p>
         </section>
 
-        <section className="education-background">
+        <section className="about-education">
           <h2>Educational Background and Professional Training</h2>
           <p>
             <strong>BSc in Radiotherapy and Oncology</strong><br />
@@ -34,11 +53,11 @@ const AboutPage = () => {
           </p>
         </section>
 
-        <section className="certificate-section">
-          <h3>My Certification</h3>
+        <section className="about-certificate">
+          <h2>My Certification</h2>
           <p>Below is a picture of my certification in Holistic Cancer Care:</p>
-          <div className="certificate-image">
-            <img src="images/bg.jpg" alt="Certificate" />
+          <div className="about-certificate-image">
+            <img src="images/certificate.jpg" alt="Certificate" />
           </div>
         </section>
       </div>
@@ -47,3 +66,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
