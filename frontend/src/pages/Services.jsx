@@ -23,8 +23,11 @@ const ServicesPage = () => {
       {/* Background Image Section */}
       <section className="services-background">
   <div className="services-background-overlay">
-    <h1>Our Services</h1>
-    <p>Book Your Free 15-Minute Consultation</p>
+    <h1 className="service-image-text">Our Services</h1>
+    <p className="service-image-subtext">
+      We offer personalized, compassionate care tailored to your needs. 
+      Book a free 15-minute consultation to discuss how we can support your journey.
+    </p>
     <button className="book-now-btn">Book Now</button>
   </div>
 </section>
@@ -60,7 +63,7 @@ const ServicesPage = () => {
   {/* Service Card 2 */}
   <div className="service-card">
     <div className="service-image-container">
-      <img src="images/c.png" alt="Returning Customers" className="service-image" />
+      <img src="images/glass_lemon_water.png" alt="Returning Customers" className="service-image" />
       <div className="service-image-overlay">
         <h2 className="service-title">Returning Customers Package</h2>
         <p className="service-price"><strong>Contact us for pricing details.</strong></p>

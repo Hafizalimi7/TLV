@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/Home.css'; // Assuming the styles are in Home.css
 
 const Home = () => {
