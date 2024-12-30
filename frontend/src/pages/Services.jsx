@@ -28,7 +28,9 @@ const ServicesPage = () => {
       We offer personalized, compassionate care tailored to your needs. 
       Book a free 15-minute consultation to discuss how we can support your journey.
     </p>
-    <button className="book-now-btn">Book Now</button>
+    <a href="https://calendly.com/tanyafeuillet/30min" target="_blank" rel="noopener noreferrer">
+      <button className="book-now-btn">Book Now</button>
+    </a>
   </div>
 </section>
 

@@ -15,25 +15,32 @@
   transition: background-color 0.3s ease;
 }
 
+
 /* Logo styles inside the header */
-.header .logo a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
-  margin: 0;
-  margin-left: 10px;  
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align the logo towards the top */
+  position: relative; /* For finer positioning */
+  top: -25px; /* Adjust this value to move the logo up */
+} 
+
+.logo-image {
+  width: 200px; /* Make the logo bigger */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Add a pointer cursor for better UX */
 }
 
 .nav-group {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;  
+  top: -90px;  
+  
 }
 
 .nav {
@@ -71,4 +78,7 @@
 .consultation-btn:hover {
   background-color: #444;
 }
+
+
+
 
