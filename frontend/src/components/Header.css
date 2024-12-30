@@ -26,6 +26,7 @@
   align-items: flex-start; /* Align the logo towards the top */
   position: relative; /* For finer positioning */
   top: -25px; /* Adjust this value to move the logo up */
+  left: -2.3%;
 } 
 
 .logo-image {
