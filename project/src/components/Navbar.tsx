@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-
+import { images } from '../assets';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,9 +12,9 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="https://purekonnect.com.ng/lifev.png" 
+                src={images.logo} 
                 alt="The Life Voyage Logo" 
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
               <span className="ml-2 text-xl font-semibold text-primary">The Life Voyage</span>
             </Link>

@@ -7,6 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import { Toaster } from "react-hot-toast";
+import TermsAndConditions from './pages/TermsAndConditions';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
           </Routes>
         </main>
         <Footer />
