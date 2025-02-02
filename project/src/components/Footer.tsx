@@ -58,17 +58,17 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          <div className="flex items-center">
+        <div className="flex flex-col md:flex-row  justify-between items-center space-y-6 md:space-y-0">
+          <div className="flex gap-2 items-center justify-start">
             <img 
               src={images.logo} 
               alt="The Life Voyage Logo" 
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="ml-2 text-xl font-semibold text-[#2B4C7E]">The Life Voyage</span>
+            <span className="text-xl font-semibold text-primary">The Life Voyage</span>
           </div>
           
-          <div className="flex space-x-6">
+          <div className="md:flex md:space-x-6 space-y-2 grid text-center">
             <Link to="/" className="text-gray-500 hover:text-[#2B4C7E]">Home</Link>
             <Link to="/about" className="text-gray-500 hover:text-[#2B4C7E]">About</Link>
             <Link to="/services" className="text-gray-500 hover:text-[#2B4C7E]">Services</Link>
@@ -76,7 +76,7 @@ export default function Footer() {
             <Link to="/terms" className="text-gray-500 hover:text-[#2B4C7E]">Terms and Conditions</Link>
             <button 
             onClick={() => handleOpenModal(privacyPolicy, "Privacy")}
-            className="text-gray-500 hover:text-[#2B4C7E]">Privacy Policy</button>
+            className="text-gray-500 m-0 p-0 hover:text-[#2B4C7E]">Privacy Policy</button>
             <button 
               onClick={() => handleOpenModal(disclaimer, "Disclaimer")}
             className="text-gray-500 hover:text-[#2B4C7E]">Disclaimer</button>

@@ -7,16 +7,16 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md relative z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto md:px-4 px-2 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex gap-3 items-center">
               <img 
                 src={images.logo} 
                 alt="The Life Voyage Logo" 
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
-              <span className="ml-2 text-xl font-semibold text-primary">The Life Voyage</span>
+              <span className="text-xl font-semibold text-primary">The Life Voyage</span>
             </Link>
           </div>
           

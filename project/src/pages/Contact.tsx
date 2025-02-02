@@ -22,7 +22,7 @@ export default function Contact() {
   
     try {
       // Sending form data to the server
-      const response = await axios.post("http://localhost:3001/send-email", formData);
+      const response = await axios.post("https://thelifevoyage.onrender.com/send-email", formData);
   
       if (response.status === 200) {
         // Notify success
@@ -89,7 +89,7 @@ export default function Contact() {
                   name="name"
                   id="name"
                   required
-                  className="py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                  className="px-2 py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                   value={formData.name}
                   onChange={handleChange}
                 />
@@ -102,7 +102,7 @@ export default function Contact() {
                   name="email"
                   id="email"
                   required
-                  className="py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                  className="px-2 py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -115,7 +115,7 @@ export default function Contact() {
                   name="phone"
                   id="phone"
                   required
-                  className="py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                  className="px-2 py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                   value={formData.phone}
                   onChange={handleChange}
                 />
@@ -126,7 +126,7 @@ export default function Contact() {
                 <select
                   name="source"
                   id="source"
-                  className="py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                  className="px-2 py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                   value={formData.source}
                   onChange={handleChange}
                 >
@@ -145,7 +145,7 @@ export default function Contact() {
                   id="message"
                   rows={4}
                   required
-                  className="py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+                  className="px-2 py-2 mt-1 block w-full rounded-lg border-gray-300 shadow focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                   value={formData.message}
                   onChange={handleChange}
                 />

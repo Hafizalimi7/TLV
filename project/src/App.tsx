@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import { Toaster } from "react-hot-toast";
 import TermsAndConditions from './pages/TermsAndConditions';
+import Confirmation from './pages/Confirmation';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/confirmation" element={<Confirmation />} />
           </Routes>
         </main>
         <Footer />

@@ -29,7 +29,7 @@ export default function About() {
 />
         </div>
 
-        <div className="mt-16 md:mt-[110px]">
+        <div className="mt-32 md:mt-[110px]">
           <h2 className="text-2xl font-bold text-gray-900 text-center">My Journey</h2>
           <p className="mt-4 text-md text-gray-500">
           Welcome to The Life Voyage, my holistic cancer support business dedicated to empowering individuals on their journey toward healing and well-being. My mission is to provide comprehensive, natural, and evidence-based solutions that complement traditional cancer treatments while promoting overall health. Through personalized nutrition, mindfulness practices, gentle movement, and emotional support, I offer a holistic approach to cancer care that nourishes the body, mind, and spirit.

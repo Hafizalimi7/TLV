@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Modal component that receives dynamic title, content, price, and onClose function
-const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstPaymentLink, secondPaymentLink }: any) => {
-  const [selectedPaymentOption, setSelectedPaymentOption] = useState<'full' | 'first' | 'second'>('full');
-  const [selectedPaymentOptions, setSelectedPaymentOptions] = useState<'full' | 'first' | 'second' | 'full1' | 'first1' | 'second1'>('full');
+const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstPaymentLink }: any) => {
+  const [selectedPaymentOption, setSelectedPaymentOption] = useState<'full' | 'first' | 'second' | 'third'>('full');
 
   // Close modal when clicking outside
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -32,7 +31,7 @@ const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstP
       className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       onClick={handleBackdropClick}
     >
-      <div className="bg-white rounded-lg w-[600px] max-w-full p-6 relative">
+      <div className="bg-white rounded-lg md:w-[600px] w-[90%] max-w-full p-6 relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-600 text-2xl font-semibold"
@@ -70,13 +69,7 @@ const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstP
             </button>
 
             {/* Second Payment Option */}
-            <button
-              onClick={() => window.open(secondPaymentLink, "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOption === 'second' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOption('second')}
-            >
-              Pay Second Instalment (£350)
-            </button>
+        
           </div>
         )}
 
@@ -100,14 +93,7 @@ const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstP
               Pay First Instalment (£400)
             </button>
 
-            {/* Second Payment Option */}
-            <button
-              onClick={() => window.open(secondPaymentLink, "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOption === 'second' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOption('second')}
-            >
-              Pay Second Instalment (£250)
-            </button>
+            
           </div>
         )}
 
@@ -134,21 +120,15 @@ const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstP
             </button>
 
             {/* Second Payment Option */}
-            <button
-              onClick={() => window.open("https://buy.stripe.com/6oE3db4px0KB4Cc5ks", "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOption === 'second' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOption('second')}
-            >
-              Pay Second Instalment (£300)
-            </button>
+           
           </div>
           <div className="space-y-4 mt-3">
           <p className='text-center font-semibold p-0 m-0'>(Group)</p>
 
             <button
               onClick={() => window.open("https://buy.stripe.com/4gw5ljaNVdxnfgQ002", "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOptions === 'full1' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOptions('full1')}
+              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOption === 'second' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
+              onMouseEnter={() => setSelectedPaymentOption('second')}
             >
               Pay Full (£480)
             </button>
@@ -156,20 +136,14 @@ const Modal = ({ isOpen, onClose, title, content, price, fullPaymentLink, firstP
             {/* First Payment Option */}
             <button
               onClick={() => window.open("https://buy.stripe.com/eVacNL2hpgJzd8I6ox", "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOptions === 'first1' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOptions('first1')}
+              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOption === 'third' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
+              onMouseEnter={() => setSelectedPaymentOption('third')}
             >
               Pay First Instalment (£300)
             </button>
 
             {/* Second Payment Option */}
-            <button
-              onClick={() => window.open("https://buy.stripe.com/14k9Bzg8f50Rb0A00a", "_blank")}
-              className={`w-full py-2 px-4 rounded-lg ${selectedPaymentOptions === 'second1' ? 'bg-[#2B4C7E] text-white' : 'bg-gray-200 text-gray-700'} hover:bg-[#1f3960] transition duration-200`}
-              onMouseEnter={() => setSelectedPaymentOptions('second1')}
-            >
-              Pay Second Instalment (£180)
-            </button>
+            
           </div>
           </div>
           
