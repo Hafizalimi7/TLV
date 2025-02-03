@@ -20,8 +20,8 @@ const services = [
     <li>Total Package Price: £800 (split into 2-month payment plan 1 at payment i.e 1st January £450 & 2nd payment 1st February £350)</li>
   </ul>,
     paylink: "https://buy.stripe.com/cN27tre07dxn3y8aEE",
-    // firstInstalment: "https://buy.stripe.com/28o8xv8FN0KBc4E6or",
-    firstInstalment: "https://buy.stripe.com/test_14k7uu0Wi1o7egEaEE",
+    firstInstalment: "https://buy.stripe.com/28o8xv8FN0KBc4E6or",
+    // firstInstalment: "https://buy.stripe.com/test_14k7uu0Wi1o7egEaEE",
     secondInstalment: "https://buy.stripe.com/3cseVTaNV78Z7OofZ2"
   },
   {

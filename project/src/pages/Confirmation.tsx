@@ -7,8 +7,8 @@ import toast from "react-hot-toast";
 const Confirmation = () => {
   const location = useLocation();
   const [userDetails, setUserDetails] = useState<any>({})
-
-const stripe = new Stripe('sk_test_51QgLVKKNgTIUXrc2wyMcnF1DDX2KZTywf2trW4pg6E1rzf5FwfAzfIbo2jlSVgxJGxhKXymW7af0Qvf4qWiNw4EO00n0Y2yFPY');
+const apikey:any = process.env.STRIPE_URL
+const stripe = new Stripe(apikey);
 async function getPaymentInfo(checkoutSessionId: string) {
   try {
     // Retrieve the Checkout Session

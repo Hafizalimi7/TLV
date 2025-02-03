@@ -68,18 +68,18 @@ export default function Footer() {
             <span className="text-xl font-semibold text-primary">The Life Voyage</span>
           </div>
           
-          <div className="md:flex md:space-x-6 space-y-2 grid text-center">
-            <Link to="/" className="text-gray-500 hover:text-[#2B4C7E]">Home</Link>
-            <Link to="/about" className="text-gray-500 hover:text-[#2B4C7E]">About</Link>
-            <Link to="/services" className="text-gray-500 hover:text-[#2B4C7E]">Services</Link>
-            <Link to="/contact" className="text-gray-500 hover:text-[#2B4C7E]">Contact</Link>
-            <Link to="/terms" className="text-gray-500 hover:text-[#2B4C7E]">Terms and Conditions</Link>
+          <div className="md:flex md:space-x-6 space-y-2 grid text-center items-center">
+            <Link to="/" className="text-gray-500 hover:text-primary">Home</Link>
+            <Link to="/about" className="text-gray-500 hover:text-primary">About</Link>
+            <Link to="/services" className="text-gray-500 hover:text-primary">Services</Link>
+            <Link to="/contact" className="text-gray-500 hover:text-primary">Contact</Link>
+            <Link to="/terms" className="text-gray-500 hover:text-primary">Terms and Conditions</Link>
             <button 
             onClick={() => handleOpenModal(privacyPolicy, "Privacy")}
-            className="text-gray-500 m-0 p-0 hover:text-[#2B4C7E]">Privacy Policy</button>
+            className="text-gray-500 m-0 p-0 hover:text-primary">Privacy Policy</button>
             <button 
               onClick={() => handleOpenModal(disclaimer, "Disclaimer")}
-            className="text-gray-500 hover:text-[#2B4C7E]">Disclaimer</button>
+            className="text-gray-500 hover:text-primary">Disclaimer</button>
           </div>
           <FootModal isOpen={isModalOpen} onClose={handleCloseModal} content={modalContent} title={modaltitle} />
 
@@ -98,16 +98,16 @@ export default function Footer() {
       )} */}
 
           <div className="flex space-x-6">
-            <a href="https://www.instagram.com/the.life.voyage" className="text-gray-400 hover:text-[#2B4C7E] transition transform hover:scale-110">
+            <a href="https://www.instagram.com/the.life.voyage" className="text-gray-400 hover:text-primary transition transform hover:scale-110">
               <Instagram className="h-6 w-6" />
             </a>
-            <a href="https://web.facebook.com/people/The-life-voyage/61570073396968/" className="text-gray-400 hover:text-[#2B4C7E] transition transform hover:scale-110">
+            <a href="https://web.facebook.com/people/The-life-voyage/61570073396968/" className="text-gray-400 hover:text-primary transition transform hover:scale-110">
               <Facebook className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-400 hover:text-[#2B4C7E] transition transform hover:scale-110">
+            <a href="https://linkedin.com" className="text-gray-400 hover:text-primary transition transform hover:scale-110">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="https://x.com" className="text-gray-400 hover:text-[#2B4C7E] transition transform hover:scale-110">
+            <a href="https://x.com" className="text-gray-400 hover:text-primary transition transform hover:scale-110">
               <Twitter className="h-6 w-6" />
             </a>
           </div>
