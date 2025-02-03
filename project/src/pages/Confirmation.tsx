@@ -39,9 +39,9 @@ async function getPaymentInfo(checkoutSessionId: string) {
   
 }
 
-const mails =async () => {
+const mails =async (paymentInfo:any) => {
 try {
-  const response = await axios.post("https://thelifevoyage.onrender.com/confirmation", userDetails);
+  const response = await axios.post("https://thelifevoyage.onrender.com/confirmation", paymentInfo);
   
       if (response.status === 200) {
         // Notify success
@@ -58,6 +58,10 @@ try {
   useEffect(() => {
     // Scroll to top of the page when the component mounts
     window.scrollTo(0, 0);
+
+  }, []);
+  useEffect(() => {
+    // Scroll to top of the page when the component mounts
     const queryParams = new URLSearchParams(location.search);
     
     // Get the 'id' query parameter
@@ -68,7 +72,7 @@ try {
       getPaymentInfo(checkoutSessionId)
         .then((paymentInfo) => {
           setUserDetails(paymentInfo)
-          mails();
+          mails(paymentInfo);
           
         })
         .catch((error) => {
@@ -151,7 +155,7 @@ try {
         <div className="mt-8">
           <Link
             to="/"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+            className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105"
           >
             Return to Home
           </Link>
